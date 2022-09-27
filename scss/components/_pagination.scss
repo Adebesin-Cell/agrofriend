@@ -1,0 +1,124 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  button {
+    background: transparent;
+  }
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    margin-bottom: var(--span-xl);
+  }
+
+  &__button {
+    .icon-prev {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      cursor: not-allowed;
+      transition: all 300ms;
+
+      &.active {
+        cursor: pointer;
+
+        svg {
+          opacity: 1;
+          stroke: var(--g__black);
+        }
+      }
+
+      svg {
+        width: 16px;
+        height: 16px;
+        opacity: 0.6;
+        stroke: var(--g__black);
+      }
+    }
+
+    .icon-next {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      cursor: not-allowed;
+      transition: all 300ms;
+
+      &.active {
+        cursor: pointer;
+
+        svg {
+          opacity: 1;
+          stroke: var(--g__black);
+        }
+      }
+
+      svg {
+        width: 16px;
+        height: 16px;
+        opacity: 0.6;
+        stroke: var(--g__black);
+      }
+    }
+  }
+
+  &__number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    transition: all 300ms;
+    font-family: var(--Montserrat);
+    font-size: var(--size-s);
+    font-weight: var(--weight-sm);
+    line-height: 23px;
+    text-align: left;
+    color: var(--g__text__black);
+
+    &--active {
+      color: var(--g__text__white);
+      background: var(--g__black);
+
+      &:hover {
+        color: var(--g__text__white) !important;
+        background: var(--g__black) !important;
+      }
+    }
+  }
+
+  &__button:hover .icon-next {
+    background: var(--g__input__focus);
+  }
+
+  &__button:hover .icon-prev {
+    background: var(--g__input__focus);
+  }
+
+  &__button:hover &__number {
+    background: var(--g__input__focus);
+  }
+
+  &__divide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-family: var(--Montserrat);
+    font-size: var(--size-s);
+    font-weight: var(--weight-sm);
+    line-height: 23px;
+    text-align: left;
+    color: var(--g__text__black);
+  }
+}

@@ -1,0 +1,29 @@
+.btn {
+  text-decoration: none;
+  display: inline-block;
+
+  &--join {
+    padding: var(--span-xs) var(--span-xl);
+    background: var(--g__join__button__brown);
+    font-family: var(--Montserrat);
+    font-size: var(--size-m);
+    font-weight: var(--weight-md);
+    line-height: 28px;
+    text-align: left;
+    color: var(--g__text__white);
+    border-radius: 10px;
+  }
+
+  &--verify {
+    margin-top: var(--span-s);
+    padding: calc(var(--span-xs) + 5px) var(--span-s);
+    background: var(--g__white);
+    font-family: var(--Montserrat);
+    font-size: var(--size-s);
+    font-weight: var(--weight-sm);
+    line-height: 20px;
+    text-align: center;
+    color: var(--g__text__black);
+    border-radius: 5px;
+  }
+}

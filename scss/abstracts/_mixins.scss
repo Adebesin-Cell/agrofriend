@@ -1,0 +1,214 @@
+// set top spacing between sections
+@mixin __section__space__top {
+  padding-top: calc(var(--span-2xl) + var(--span-m));
+
+  @media only screen and (max-width: 600px) {
+    padding-top: var(--span-xl);
+  }
+}
+
+// set top spacing between sections -- medium
+@mixin __section__space__top__md {
+  padding-top: calc(var(--span-2xl) + var(--span-xs));
+
+  @media only screen and (max-width: 600px) {
+    padding-top: var(--span-xl);
+  }
+}
+
+// set bottom spacing between sections
+@mixin __section__space__bottom {
+  padding-bottom: calc(var(--span-2xl) + var(--span-xs));
+
+  @media only screen and (max-width: 600px) {
+    padding-bottom: var(--span-xl);
+  }
+}
+
+// set spacing between sections -- full
+@mixin __section__space {
+  padding-top: calc(var(--span-2xl) + var(--span-xs));
+  padding-bottom: calc(var(--span-2xl) + var(--span-xs));
+
+  @media only screen and (max-width: 600px) {
+    padding-top: var(--span-2xl);
+    padding-bottom: var(--span-2xl);
+  }
+}
+
+@mixin __section__margin__top__md {
+  margin-top: calc(var(--span-2xl) + var(--span-xs));
+}
+
+// set section header --gray
+@mixin __section__header__gray {
+  font-family: var(--Montserrat);
+  font-size: var(--size-xl);
+  font-weight: var(--weight-md);
+  line-height: 43px;
+  text-align: left;
+  color: var(--g__header__gray);
+}
+
+// set section header clipped background
+@mixin __section__header__ {
+  background: var(--text__gradient);
+  -webkit-background-clip: text !important;
+  -moz-background-clip: text !important;
+  -ms-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  overflow: clip;
+  margin-top: var(--span-s);
+  font-family: var(--Montserrat);
+  font-size: var(--size-xl);
+  font-weight: var(--weight-xlg);
+  line-height: 43px;
+  text-align: left;
+  color: var(--palette__brown__darker);
+
+  @media only screen and (max-width: 600px) {
+    margin-top: 0;
+    font-size: calc(var(--size-l) + 4px);
+    line-height: 32px;
+  }
+}
+
+// set section header clipped background -- small
+@mixin __section__header__sm {
+  @include __section__header__;
+  margin-top: 0;
+  font-size: calc(var(--size-l) + 2px);
+  line-height: 28px;
+}
+
+@mixin __section__header__sm--white {
+  background: var(--text__gradient--white);
+  -webkit-background-clip: text !important;
+  -moz-background-clip: text !important;
+  -ms-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  overflow: clip;
+
+  margin-top: 0;
+  font-size: calc(var(--size-l) + 2px);
+  line-height: 28px;
+  color: var(--g__white) !important;
+}
+
+// sets section background
+@mixin __section__background($color) {
+  background: $color;
+}
+
+@mixin __card__wrapper__grid($repeat-value) {
+  margin-top: var(--span-m) !important;
+  display: grid;
+  grid-template-columns: repeat($repeat-value, minmax(300px, 1fr));
+  gap: var(--span-m);
+  overflow-x: hidden;
+}
+
+@mixin __card__wrapper__ {
+  margin-top: var(--span-m) !important;
+  display: flex;
+  gap: var(--span-m);
+  overflow-x: hidden;
+}
+
+@mixin __card__ {
+  border-radius: 10px;
+  background: var(--g__white);
+  max-width: calc(100% / 4);
+  flex-grow: 1 !important;
+  flex-basis: calc(100% / 4);
+
+  @media only screen and (max-width: 1200px) {
+    max-width: calc(100% / 3.5);
+    flex-basis: calc(100% / 3.5);
+    flex-shrink: 0 !important;
+  }
+
+  @media only screen and (max-width: 990px) {
+    max-width: calc(100% / 2.5);
+    flex-basis: calc(100% / 2.5);
+  }
+
+  @media only screen and (max-width: 600px) {
+    max-width: calc(100% / 1.5);
+    flex-basis: calc(100% / 1.5);
+  }
+
+  @media only screen and (max-width: 475px) {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+
+@mixin __header__space {
+  padding: var(--span-xs) 0;
+}
+
+@mixin __header__space__modified {
+  padding: var(--span-s) var(--span-m);
+}
+
+@mixin __text__clip {
+  -webkit-background-clip: text !important;
+  -moz-background-clip: text !important;
+  -ms-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  overflow: clip !important;
+}
+
+@mixin __form__login {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@mixin __form__border($thickness, $color) {
+  border: $thickness solid $color;
+}
+
+@mixin __form__border__top($thickness, $color) {
+  border-top: $thickness solid $color;
+}
+
+@mixin __form__border__right($thickness, $color) {
+  border-right: $thickness solid $color;
+}
+
+@mixin __form__border__left($thickness, $color) {
+  border-left: $thickness solid $color;
+}
+
+@mixin __form__border__bottom($thickness, $color) {
+  border-bottom: $thickness solid $color;
+}
+
+@mixin __form__curve($borderRadius) {
+  border-radius: $borderRadius;
+}
+
+@mixin __form__curve__top($size) {
+  border-top-left-radius: $size;
+  border-top-right-radius: $size;
+}
+
+@mixin __form__curve__bottom($size) {
+  border-bottom-left-radius: $size;
+  border-bottom-right-radius: $size;
+}
+
+@mixin dot(
+  $width: $dot-width,
+  $height: $dot-height,
+  $radius: $dot-radius,
+  $bg-color: $dot-bg-color,
+  $color: $dot-color
+) {
+  width: $width;
+  height: $height;
+  border-radius: $radius;
+  background-color: $bg-color;
+  color: $color;
+}

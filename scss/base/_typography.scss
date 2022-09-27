@@ -1,0 +1,20 @@
+.heading--primary {
+  font-family: var(--Montserrat);
+  font-size: calc(var(--size-2xl));
+  font-weight: var(--weight-xlg);
+  line-height: 54px;
+  text-align: center;
+  color: var(--g__white--fixed);
+
+  @media only screen and (max-width: 990px) {
+    font-size: calc(var(--size-xl));
+    line-height: 40px;
+    padding: 0 var(--span-xl);
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: calc(var(--size-l) + 4px);
+    line-height: 32px;
+    padding: 0 var(--span-s);
+  }
+}

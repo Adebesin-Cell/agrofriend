@@ -1,0 +1,42 @@
+input {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+// input:-webkit-autofill,
+// textarea:-webkit-autofill,
+// select:-webkit-autofill {
+//   &,
+//   &:hover,
+//   &:focus,
+//   &:active {
+//     background: transparent;
+//     color: var(--grootech__text__brown__3) !important;
+//     box-shadow: 0 0 0px 1000px white inset !important;
+//     font-family: var(--Montserrat);
+//     font-size: calc(var(--size-m) + 2px);
+//     font-weight: var(--weight-md);
+//     line-height: 28px;
+//     text-align: left;
+//     -webkit-text-fill-color: var(--grootech__text__brown__3) !important;
+//   }
+// }

@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* check variables.scss for variable references
+  BEM convention (Not 100% perfect)
+  7 in 1 pattern Architure 
+*/
+
+// global reset styles
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  scroll-behavior: smooth;
+}
+
+// global box model setting
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+// global font setting
+body {
+  font-family: var(--Montserrat);
+  -webkit-font-smoothing: antialiased;
+  @include __section__background(var(--g__background__white));
+}

@@ -1,0 +1,89 @@
+.container-small {
+  background: var(--background);
+}
+
+.container-small .tab-link {
+  background: unset;
+}
+
+.container-small .tab-link > .tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  -webkit-box-shadow: inset 0 -1px 0 var(--c-mix-1);
+          box-shadow: inset 0 -1px 0 var(--c-mix-1);
+  background: var(--background);
+}
+
+.container-small .tab-link > .tabs > .tab {
+  width: 100%;
+  color: var(--c-mix-2);
+  font-size: var(--t-m);
+  line-height: var(--l-body);
+  height: calc(var(--unit) * 5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  -webkit-transition: var(--a-speed);
+  transition: var(--a-speed);
+}
+
+@media screen and (min-width: 768px) {
+  .container-small .tab-link > .tabs > .tab {
+    width: auto;
+    margin-right: var(--s-4);
+  }
+  .container-small .tab-link > .tabs > .tab:last-child {
+    margin-right: 0;
+  }
+}
+
+.container-small .tab-link > .tabs > .tab:hover {
+  color: var(--foreground);
+}
+
+.container-small .tab-link > .tabs > .tab.active {
+  color: var(--foreground);
+  -webkit-box-shadow: inset 0 -1px 0 var(--foreground);
+          box-shadow: inset 0 -1px 0 var(--foreground);
+}
+
+.container-small .tab-link > .tabs {
+  height: calc(var(--unit) * 5);
+}
+
+.container-small .tab-link > .tabs > .tab {
+  width: 100%;
+  margin-right: 0;
+  height: calc(var(--unit) * 5);
+}
+
+.tab-content-box {
+  position: relative;
+  margin: 0;
+  margin-bottom: calc(var(--unit) * 9);
+  padding: 0 var(--s-2);
+  margin-bottom: var(--s-2) !important;
+  padding: 0;
+}
+
+.tab-content-box > .tab-content > [data-tab-content] {
+  display: none;
+}
+
+.tab-content-box > .tab-content > .active[data-tab-content] {
+  -webkit-animation: fadeIn 500ms linear 1;
+          animation: fadeIn 500ms linear 1;
+  display: block;
+}
+/*# sourceMappingURL=junk.css.map */
